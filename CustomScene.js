@@ -14,6 +14,7 @@ export default class CustomScene {
       colors: [
         0xff0000, 0x00ff00, 0x0000ff, 0x00ffff, 0xffff00, 0xff00ff, 0x550055, 0x005555, 0x555500,
       ],
+      rotationSpeed: 1,
     })
 
     /*
@@ -36,6 +37,9 @@ export default class CustomScene {
     /*
      * this function can be used to preload additional assets.
      * for example, the ply loader scene uses this function to load the ply file.
+     * this function gets executed by Preload.js,
+     * all functions below get executed by ArmEngine.js, which executes much later.
+     * this means that preloading file here is much faster than doing it anywhere below.
      */
   }
 
@@ -45,7 +49,7 @@ export default class CustomScene {
    * gets called directly before the Arm Engine initializes the gltf file in threejs.
    * can be used to on-the-fly change the gltf, for example cloning one mesh from the gltf file to create particles.
    */
-  async beforeLoadModel({ engine, preload }) {
+  beforeLoadModel({ engine, preload }) {
     this.engine = engine
 
     /* preload already has a reference to the loaded gltf file */
@@ -57,7 +61,7 @@ export default class CustomScene {
    * CustomScene.afterLoadModel
    * gets called directly after the Arm Engine has loaded the gltf file and initialized it.
    */
-  async afterLoadModel({ engine }) {
+  afterLoadModel({ engine }) {
     this.model = engine.model
   }
 
@@ -89,38 +93,9 @@ export default class CustomScene {
   /*
    * CustomScene.tick
    * this function gets called every frame.
-   * it receives the timestamp and frame, but does not render on it's own.
-   */
-  tick({ delta, timestamp, frame }) {
-    /*
-     * time difference since last frame,
-     * can be used for framerate independent effects and animations.
-     */
-    this.delta = delta
-
-    /*
-     * timestamp of this frame based on the start of the runtime
-     */
-    this.timestamp = timestamp
-
-    /*
-     * frame: this is the webxr frame, useful for some advanced features.
-     * since ios does not yet support webxr, this is largely unused and, unfortunately, quite useless.
-     */
-    this.frame = frame
-
-    /*
-     * this.model is defined above in afterLoadModel
-     * in this case, we change the y axis rotation of the whole model
-     */
-    this.model.rotation.y += 0.1
-  }
-
-  /*
-   * CustomScene.tick
-   * this function gets called every frame.
    * it receives the deltatime since the last frame, the timestamp and in xr the current frame.
    */
   tick({ delta, timestamp, frame }) {
+    // this.model.rotation.y += this.config.rotationSpeed * delta
   }
 }
