@@ -1,43 +1,24 @@
-# @artificialmuseum/sandbox
+# @artificialmuseum/glitch
 
-This is the artifact creation sandbox for the [Artificial Museum](https://artificialmuseum.com).
+This is the artifact creation sandbox for the [Artificial Museum](https://artificialmuseum.com): glitch.com edition.
 
-Makers can use this sandbox to customize various features of their artifact and test them on [glitch](https://glitch.com).
+Artists can use this sandbox to customize various features of their artifact and test them on [glitch](https://glitch.com).
 
 All of the settings in this sandbox are the same as they are in the production version of the platform,
 lighting, skybox, scale, renderer and other base scene components are setup already.
-All that is left to do is to customize various aspects of the artifact.
+All that is left to do is to customize various aspects of the artifact using artifact.js and CustomScene.js
 
-### usage
+### usage / setup
 
-### easy way
-
-- go to [https://glitch.com/edit/#!/artificialmuseumsandbox](https://glitch.com/edit/#!/artificialmuseumsandbox)
-- find the "Remix" Button on the top right of the page and click it
-- register an account, connect a social media account or log into your existing account
-- all done. edit CustomScene.js or artifact.js or [see below](#custom-files) to find out how to upload custom files
-
-### complicated way
-
-if you need to get the newest features from github you can use the following method:
-
- got to [glitch.com](https://glitch.com), register a free account or login via github account.
-- click new project
-- click "import from github"
-- copy `https://github.com/artificialmuseum/sandbox.git` in the popup window
-- press ok or the enter key
-- wait for glitch to do the magic
-- click the terminal in the bottom left
-- once it opened, input
-  `sh init-glitch.sh`
-  and press the enter key on your keyboard.
-- the page will refresh and you will see the directory with the files you can edit and overwrite.
-
+[click here](https://glitch.com/edit/#!/remix/artificialmuseumsandbox)
+glitch will walk you through the rest of the needed steps.
+you may need to create a glitch account.
+if you want to use the sandbox without registering, you can use [artificialmuseum/sandbox](https://github.com/artificialmuseum/sandbox/) instead.
 
 # custom files
 
 you can upload new files for the mp3, mp4, glb and skybox files,
-just make sure to get the cdn url of the files after uploading them
+just make sure to get the cdn url of the files after uploading them.
 and use the resulting url in the corresponding field of the artifact.js file:
 
 ```js
