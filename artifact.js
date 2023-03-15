@@ -26,6 +26,28 @@ export default {
    */
   file: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/theinternetsownboy.glb?v=1678891896217',
 
+
+  /*
+   * cam
+   * the initial camera position
+   * { type: 'vector3' }
+   */
+  cam: {
+    // x: 0,
+    y: 1.7,
+    // z: -3,
+  },
+
+  /*
+   * lookat
+   * the position the camera looks at and rotates around
+   * { type: 'Vector3' }
+   */
+  lookat: {
+    // x: 0,
+    y: 1.7,
+    // z: 0,
+  },
   /*
    * clip
    * when clip is true, all objects in the glb file that have "clip" in their name
