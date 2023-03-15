@@ -39,7 +39,7 @@ export default class CustomScene {
      * for example, the ply loader scene uses this function to load the ply file.
      * this function gets executed by Preload.js,
      * all functions below get executed by ArmEngine.js, which executes much later.
-     * this means that preloading file here is much faster than doing it anywhere below.
+     * this means that preloading a file here is much faster than doing it anywhere below.
      */
   }
 
