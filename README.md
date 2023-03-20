@@ -10,22 +10,24 @@ All that is left to do is to customize various aspects of the artifact using art
 
 ### usage / setup
 
-[click here](https://glitch.com/edit/#!/remix/artificialmuseumsandbox)
+[click here](https://glitch.com/edit/#!/remix/armsandbox)
 glitch will walk you through the rest of the needed steps.
+
 you may need to create a glitch account.
-if you want to use the sandbox without registering, you can use [artificialmuseum/sandbox](https://github.com/artificialmuseum/sandbox/) instead.
+
+if you want to use the sandbox without registering, you can use [artificialmuseum/sandbox](https://github.com/artificialmuseum/sandbox/) instead and develop your artifact locally.
 
 # custom files
 
-you can upload new files for the mp3, mp4, glb and skybox files,
-just make sure to get the cdn url of the files after uploading them.
+you can upload new files for the audio, video, glb and skybox files,
+just make sure to get the cdn url of the files after uploading them in the glitch assets area
 and use the resulting url in the corresponding field of the artifact.js file:
 
 ```js
   audio: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/artifact.mp3?v=1678893678952',
   video: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/artifact.mp4?v=1678893692297',
   sky: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/default.jpg?v=1678892582446',
-  file: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/theinternetsownboy.glb?v=1678891896217',
+  file: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/cube.glb?v=1679256200503',
 ```
 
 would work, as an example.
