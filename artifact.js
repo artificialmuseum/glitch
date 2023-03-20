@@ -48,6 +48,7 @@ export default {
     y: 1.7,
     // z: 0,
   },
+
   /*
    * clip
    * when clip is true, all objects in the glb file that have "clip" in their name
