@@ -26,7 +26,6 @@ export default {
    */
   file: 'https://cdn.glitch.global/d54910d5-62eb-4e7e-a100-18f881ab74c4/theinternetsownboy.glb?v=1678891896217',
 
-
   /*
    * cam
    * the initial camera position
@@ -131,7 +130,6 @@ export default {
    */
   // loopVideo: false,
 
-
   /*
    * animations
    * controls animation playback and various other settings
@@ -143,25 +141,21 @@ export default {
      * { type: 'boolean', default: true }
      */
     // loop: false,
-
     /*
      * should animations autoplay?
      * { type: 'boolean', default: true }
      */
     // autoplay: false,
-
     /*
      * when animations are not looping, they usually should clamp when finished.
      * { type: 'boolean' }
      */
     // clampWhenFinished: true,
-
     /*
      * a list of animation names that should not be looping
      * { type: 'array', itemType: 'string' }
      */
     // noLoopAnimations: ['noLoopAnimationName'],
-
     /*
      * a list of paused animations
      * can be used to programatically start animations
@@ -169,6 +163,4 @@ export default {
      */
     // pausedAnimations: ['pausedAnimationName'],
   },
-
-
 }
